@@ -24,7 +24,7 @@
       
 
     
-          <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="mb-auto">
               <div>
                 <h3 class="float-md-start mb-0">Cover</h3>
@@ -36,8 +36,68 @@
               </div>
             </header>
           
-            <main class="px-3">
-
+            <main class="">
+                <div class="row">
+                    <section class="col-md-9">
+                        <article class="mb-4">
+                            <div class="p-5 text-center bg-white rounded-3">
+                                <h1 class="text-body-emphasis">Neem contact op</h1>
+                                <p class="lead">Ik hoor graag van u! <br> Vul het onderstaande formulier in of neem contact op via sociale media.</p>
+                            </div>
+                        </article>
+            
+                        <article>
+                            <form name="contact" method="POST" data-netlify="true">
+                                <p>
+                                  <label >Naam:</label>
+                                  <input class="col-12 form-control" type="text" name="name" required>
+                                </p>
+                                <p>
+                                  <label >Onderwerp:</label>
+                                  <input class="col-12 form-control" type="text" name="name" required>
+                                </p>
+                                <p>
+                                  <label >antwoord: </label>
+                                  <textarea class="col-12 form-control" name="Schrijf hier uw bericht..." required></textarea>
+                                </p>
+                                <p>
+                                  <button type="submit" class="btn btn-primary">Verstuur</button>
+                                </p>
+                              </form>
+                        </article>
+                    </section>
+                    <aside class="col-md-3 py-3 ">
+                      <div>
+                          <h4 class="fst-italic">Contactgegevens</h4>
+                          <ul class="list-unstyled p-2">
+                              <li><i class="bi bi-geo-alt-fill"></i> Adres: 2040, mortsel</li>
+                              <li><i class="bi bi-telephone-fill"></i>telefoon: +32 491 03 10 75</li>
+                              <li><i class="bi bi-envelope-fill"></i> mail: <a href="mailto:thierryvanboxel@hotmail.com">thierryvanboxel@hotmail.com</a></li>
+                          </ul>
+                
+                
+                          <section id="kaart" class="row">
+                            <div id="contactlocation" class="col-12 mb-3"></div>
+                          </section>
+                          <br>
+                          <hr class="featurette-divider">
+                
+                          <div class="d-flex gap-3 p-2">
+                              <a href="https://be.linkedin.com/in/thierry-van-boxel-55902b20a" target="_blank">
+                                  <button type="button" class="btn btn-primary">
+                                      <i class="bi bi-linkedin fs-4"></i>
+                                  </button>
+                              </a>
+                              <a href="https://github.com/Starax30" target="_blank">
+                                  <button type="button" class="btn btn-primary">
+                                      <i class="bi bi-github fs-4"></i>
+                                  </button>
+                              </a>
+                          </div>
+                      </div>
+                
+                  </aside>
+                </div>
             </main>
           
             <footer class="mt-auto text-white-50">
