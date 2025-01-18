@@ -31,4 +31,43 @@ aside {
   font-size: 0.95rem;
   color: #6c757d;
 }
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
 
+.day {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.day:hover {
+  background-color: #f1f3f5;
+}
+
+.unavailable {
+  background-color: #8b94983f;
+  cursor: not-allowed;
+}
+
+.available {
+  background-color: #c3e6cb;
+  color: #155724;
+}
+
+.day-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#month-select {
+  font-size: 1.2rem;
+}
