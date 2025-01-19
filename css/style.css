@@ -2,24 +2,68 @@
   background: linear-gradient(#fa8072, #ffff);
 }
 
-aside {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  padding: 20px;
+
+
+
+.timeline {
+  position: relative;
+  margin: 30px 0;
+  padding-left: 80px;
+  border-left: 2px solid #ffd0ca; /* Fijne lijn */
 }
 
-#timeline {
-  margin-top: 20px;
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.timeline-card {
-  background: white;
-  transition: transform 0.2s ease-in-out;
+.timeline-item:hover {
+  transform: translateY(-5px); /* Klein zweefeffect */
 }
 
-.timeline-card:hover {
-  transform: scale(1.05);
-  background-color: #e9ecef;
+.timeline-item::before {
+  content: attr(data-year);
+  position: absolute;
+  left: -70px;
+  top: -5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a0707;
+}
+
+.timeline-content {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.balloon {
+  position: relative;
+  background: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f1f1f1 transparent transparent;
+  transform: translateY(-50%);
+}
+
+.timeline-item:hover .balloon {
+  background: #ffd0ca;
+  color: #040303;
 }
 
 .year {
@@ -71,3 +115,8 @@ aside {
 #month-select {
   font-size: 1.2rem;
 }
+
+
+
+
+

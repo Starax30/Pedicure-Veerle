@@ -55,3 +55,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Init: Toon de kalender voor januari (standaard maand)
     generateCalendar(0);
 });
+
