@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Beschikbare dagen (voor elke maand)
     const availableDays = {
-        0: [1, 2, 3, 4,5,8,9,10,11,12,15,16,17,18,19,22,23,24,25,26,29,30,31], // Januari
+        0: [1, 4,5,8,11,12,15,18,19,22,25,26,29,], // Januari
         1: [8, 14, 22],      // Februari
         2: [1, 5, 12, 19],   // Maart
         3: [4, 10, 18, 25],  // April
