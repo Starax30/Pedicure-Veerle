@@ -2,57 +2,70 @@ document.addEventListener("DOMContentLoaded", function () {
     const calendar = document.getElementById("calendar");
     const monthSelect = document.getElementById("month-select");
 
-    // Beschikbare dagen (voor elke maand)
-    const availableDays = {
-        0: [1, 4,5,8,11,12,15,18,19,22,25,26,29,], // Januari
-        1: [8, 14, 22],      // Februari
-        2: [1, 5, 12, 19],   // Maart
-        3: [4, 10, 18, 25],  // April
-        4: [3, 9, 16, 30],   // Mei
-        5: [6, 14, 21],      // Juni
-        6: [2, 8, 15],       // Juli
-        7: [5, 20, 27],      // Augustus
-        8: [10, 15, 22],     // September
-        9: [4, 11, 18],      // Oktober
-        10: [7, 14, 21],     // November
-        11: [1, 8, 25],      // December
+    // Dagen van de week in het Nederlands
+    const daysOfWeek = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+
+    // Beschikbare dagen (voorbeeld: { maand: [lijst met dagen] })
+    const availability = {
+        0: [2, 4, 6, 9, 12], // Januari
+        1: [1, 5, 10, 15],   // Februari
+        2: [3, 8, 12, 18],   // Maart
+        3: [3, 8, 12, 18],
+        4: [3, 8, 12, 18],
+        5: [3, 8, 12, 18],
+        6: [3, 8, 12, 18],
+        7: [3, 8, 12, 18],
+        8: [3, 8, 12, 18],
+        9: [3, 8, 12, 18],
+        10: [3, 8, 12, 18],               // April (geen beschikbaarheid)
+        11: [3, 8, 12, 18],
+        // Voeg hier beschikbaarheid toe voor andere maanden...
     };
 
-    // Dagen per maand
-    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    // Update de kalender bij het wisselen van maand
+    monthSelect.addEventListener("change", () => renderCalendar(monthSelect.value));
 
-    // Genereer de kalender voor de geselecteerde maand
-    function generateCalendar(month) {
-        calendar.innerHTML = ""; // Reset de kalender
+    function renderCalendar(month) {
+        const currentYear = new Date().getFullYear();
+        const firstDay = new Date(currentYear, month, 1);
+        const lastDay = new Date(currentYear, month + 1, 0);
 
-        const totalDays = daysInMonth[month];
-        const monthAvailableDays = availableDays[month] || [];
+        // Reset de kalender
+        calendar.innerHTML = "";
 
-        for (let day = 1; day <= totalDays; day++) {
-            const dayElement = document.createElement("div");
-            dayElement.className = "day";
-            dayElement.innerHTML = `<span class="day-number">${day}</span>`;
+        // Voeg de headers toe (dagen van de week)
+        daysOfWeek.forEach(day => {
+            const dayHeader = document.createElement("div");
+            dayHeader.textContent = day;
+            dayHeader.classList.add("header");
+            calendar.appendChild(dayHeader);
+        });
 
-            if (monthAvailableDays.includes(day)) {
-                dayElement.classList.add("available");
-                dayElement.addEventListener("click", () => {
-                    alert(`Dag ${day} geselecteerd als beschikbaar.`);
-                });
+        // Lege cellen voor dagen vóór de eerste dag van de maand
+        let emptyCells = (firstDay.getDay() + 6) % 7; // Start maandag
+        for (let i = 0; i < emptyCells; i++) {
+            const emptyCell = document.createElement("div");
+            calendar.appendChild(emptyCell);
+        }
+
+        // Voeg de dagen toe
+        for (let day = 1; day <= lastDay.getDate(); day++) {
+            const dayCell = document.createElement("div");
+            dayCell.textContent = day;
+
+            // Controleer beschikbaarheid
+            if (availability[month]?.includes(day)) {
+                dayCell.classList.add("available"); // Beschikbaar
             } else {
-                dayElement.classList.add("unavailable");
+                dayCell.classList.add("unavailable"); // Niet beschikbaar
             }
 
-            calendar.appendChild(dayElement);
+            calendar.appendChild(dayCell);
         }
     }
 
-    // Voeg evenement toe aan de dropdown voor maandselectie
-    monthSelect.addEventListener("change", (e) => {
-        const selectedMonth = parseInt(e.target.value, 10);
-        generateCalendar(selectedMonth);
-    });
-
-    // Init: Toon de kalender voor januari (standaard maand)
-    generateCalendar(0);
+    // Start met de huidige maand
+    const currentMonth = new Date().getMonth();
+    monthSelect.value = currentMonth;
+    renderCalendar(currentMonth);
 });
-
