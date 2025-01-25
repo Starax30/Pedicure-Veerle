@@ -3,22 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthSelect = document.getElementById("month-select");
 
     // Dagen van de week in het Nederlands
-    const daysOfWeek = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+    const daysOfWeek = ["Ma", "Di", "Woe", "Do", "Vrij", "Za", "Zo"];
 
     // Beschikbare dagen (voorbeeld: { maand: [lijst met dagen] })
     const availability = {
-        0: [2, 4, 6, 9, 12], // Januari
-        1: [1, 5, 10, 15],   // Februari
-        2: [3, 8, 12, 18],   // Maart
-        3: [3, 8, 12, 18],
-        4: [3, 8, 12, 18],
-        5: [3, 8, 12, 18],
-        6: [3, 8, 12, 18],
-        7: [3, 8, 12, 18],
-        8: [3, 8, 12, 18],
-        9: [3, 8, 12, 18],
-        10: [3, 8, 12, 18],               // April (geen beschikbaarheid)
-        11: [3, 8, 12, 18],
+        0: [1,2, 6, 8,9,,13,15,16,20,22,23,27,,29,30], // Januari
+        1: [3,5,6,10,12,13,17,19,20,24,26,27],   // Februari
+        2: [3,5,6,10,12,13,17,19,20,24,26,27],   // Maart
+        3: [2,3,,7,9,10,14,16,17,21,23,24,28,30,31],
+        4: [1,5,7,8,12,14,15,19,21,22,26,28,29],
+        5: [2,4,5,9,11,12,16,18,19,23,25,26,30],
+        6: [2,3,7,9,10,14,16,17,21,23,24,28,30,31],
+        7: [4,6,7,11,13,14,18,20,21,25,27,28,],
+        8: [1,3,4,8,10,11,15,17,18,22,24,25,29],
+        9: [1,2,6,8,9,13,15,16,20,22,23,27,29,30],
+        10: [3,5,6,10,12,13,17,19,20,24,26,27,31],               // April (geen beschikbaarheid)
+        11: [1,3,4,8,10,11,15,17,18,22,24,25,29,31],
         // Voeg hier beschikbaarheid toe voor andere maanden...
     };
 
