@@ -18,8 +18,12 @@
             crossorigin="anonymous" defer></script>
         <script src="js/js-index.js" defer></script>
         <script src="../assets/dist/js/bootstrap.bundle.min.js" defer></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
 
 
     </head>
@@ -103,22 +107,18 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="col-md-4 p-2">
-                <div class="card shadow-sm hover-card">
-                    <img src="assets/images/Kwaaltjes.webp" class="card-img-top" alt="Card Image 3">
-                    <div class="card-body">
-                      <ul>
-                        <li class="list-group-item">Aangepaste verzorging: + €10</li>
-                    </ul>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <div class="row col-12">
-        <div id="map"></div>
-      </div>
+<div class="col-md-12 p-3"></div>
+        <h2><strong>Werkgebied</strong></h2>
+            <div class=" p-2">
+                <div class=" hover-card">
+                  <div class=" rounded-bottom-4 rounded-top-4" id="map"></div>
+                    
+                </div>
+            </div>
+
+
     </div>
 
       </main>
