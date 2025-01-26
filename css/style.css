@@ -138,3 +138,8 @@ aside {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: rgba(245, 245, 245, 0.95); /* Lichtgrijze achtergrondschaduw */
 }
+
+#map {
+  height: 400px; /* Stel de hoogte van de kaart in */
+  margin-top: 20px;
+}
