@@ -123,3 +123,18 @@ aside {
 .display-7{
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+.card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(245, 245, 245, 0.95); /* Lichtgrijze achtergrondschaduw */
+}
