@@ -61,8 +61,8 @@
                     <label >Naam:</label>
                     <input class=" form-control" type="text" name="name" required>
                   </p>
-                  <p>
-                    <label class="col-12">Opties:
+                  <div class="row">
+                    <label class="col-md-6">Opties:
                     <select class="form-select" name="options" required>
                         <option value="" disabled selected>Kies een optie</option>
                         <option value="Eksteroog">Eksteroog</option>
@@ -73,13 +73,18 @@
                         <option value="Advies schimmel">Advies schimmel</option>
                     </select>
                   </label>
+                
+                <p class="col-md-6">
+                  <label>Telefoonnummer:</label>
+                  <input class="form-control" type="tel" name="phone" pattern="[0-9+\s]+" placeholder="+32 4..." required>
                 </p>
+              </div>
                   <p>
-                    <label >antwoord: </label>
-                    <textarea class="col-12 form-control" name="Schrijf hier uw bericht..." required></textarea>
+                    <label >Beschrijving: </label>
+                    <textarea class="col-12 form-control" placeholder="Indien geen van de opties, omschrijf de klachten." required></textarea>
                   </p>
                   <p>
-                    <button type="submit" class="btn btn-primary">Verstuur</button>
+                    <button id="btncolor" type="submit" class="btn">Verstuur</button>
                   </p>
                 </form>
           </article>

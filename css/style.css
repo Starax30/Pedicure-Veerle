@@ -143,3 +143,7 @@ aside {
   height: 400px; /* Stel de hoogte van de kaart in */
   margin-top: 20px;
 }
+
+#btncolor{
+  background-color: #f8cdc8;
+}
