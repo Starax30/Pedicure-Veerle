@@ -105,6 +105,7 @@ aside {
   background-color: #d4edda; /* Lichtgroen */
   border: 1px solid #c3e6cb;
   color: black; /* Donkergroen */
+  cursor: pointer;
 }
 
 /* Stijl voor niet-beschikbare dagen */
@@ -112,12 +113,13 @@ aside {
   background-color: #dfe2e5; /* Lichtrood */
   border: 1px solid #dfe2e5;
   color: black; /* Donkerrood */
+  cursor: not-allowed;
 }
 
 /* Optioneel: Hover-effect */
 .calendar div:hover {
   filter: brightness(0.95);
-  cursor: pointer;
+  
 }
 
 .display-7{
