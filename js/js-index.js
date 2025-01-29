@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Interactieve tijdlijn geladen!");
   });
   
-  const map = L.map('map').setView([51.3482122, 4.7606187], 11); // Antwerpen
+  const map = L.map('map').setView([51.3488335, 4.6605458], 10); // Antwerpen
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '© OpenStreetMap contributors'
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const polygon = L.polygon([
   [51.4213173,4.5395157 ],  // Punt 1
-  [51.3981457,4.8406511],  // Punt 2
+  [51.4037797,4.8640952],  // Punt 2
   [51.3130539,4.8881936],  // Punt 3
   [51.2900898,4.4915345],
   [51.4213173,4.5395157 ]   // Terug naar Punt 1

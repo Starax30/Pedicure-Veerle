@@ -149,3 +149,27 @@ aside {
 #btncolor{
   background-color: #f8cdc8;
 }
+
+body {
+  position: relative;
+  background: url('assets/images/achtergrond.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Witte waas om de achtergrond subtiel te verzachten */
+  backdrop-filter: blur(8px); /* Wazig effect */
+  z-index: 1;
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
