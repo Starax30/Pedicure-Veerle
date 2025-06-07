@@ -25,13 +25,13 @@ const polygon = L.polygon([
   [51.4213173,4.5395157 ],  // Punt 1
   [51.4037797,4.8640952],  // Punt 2
   [51.3130539,4.8881936],  // Punt 3
-  [51.2716725,4.7132557],
-  [51.2900898,4.4915345], // Punt 4
+  [51.2716725,4.7132557], //Punt 4
+  [51.2900898,4.4915345], // Punt 5
   [51.4213173,4.5395157 ]   // Terug naar Punt 1
 ], {
-  color: 'blue',      // Randkleur
+  color: 'Skyblue',      // Randkleur
   fillColor: 'skyblue', // Vul kleur
-  fillOpacity: 0.5    // Transparantie
+  fillOpacity: 0.3    // Transparantie
 }).addTo(map);
 
 // Optioneel: Een popup toevoegen
